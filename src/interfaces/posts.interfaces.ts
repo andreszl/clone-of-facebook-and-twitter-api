@@ -14,6 +14,19 @@ export namespace posts {
 			updated_at: Date,
 		},
 	}
+	export interface IPostSchema {
+		_id: string,
+		title: string,
+		description: string,
+		email: string,
+		likes: string[],
+		dislikes: string[]
+		comments?: number,
+		timestamp: {
+			created_at: Date,
+			updated_at: Date,
+		},
+	}
 
 	export interface Icreate {
 		title: string,
