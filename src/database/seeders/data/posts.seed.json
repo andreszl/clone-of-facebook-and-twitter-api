@@ -1,0 +1,1 @@
+[{"_id":{"$oid":"6107d712a8a9bb2cf45bc532"},"name":"admin","email":"admin@admin.com","password":"25f9e794323b453885f5181f1b624d0b","timestamp":{"created_at":{"$date":"2021-08-02T11:29:22.414Z"},"updated_at":{"$date":"2021-08-02T11:29:22.414Z"}}}]
