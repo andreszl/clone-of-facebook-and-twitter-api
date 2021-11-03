@@ -5,6 +5,7 @@ import { FindAndModifyWriteOpResultObject, ObjectId } from 'mongodb';
 import request from 'request';
 import PostModel from '../models/posts.model';
 import * as interfaces from '../interfaces';
+import * as utils from '../utils/functions.util';
 
 export default class {
 	public async store(
@@ -12,6 +13,9 @@ export default class {
 		res: Response,
 	) {
 		try {
+
+			utils.validPropeties<interfaces.posts.Icreate>(req.body, interfaces.posts.schema);
+
 			const result = await PostModel.store({
 				_id: new ObjectId(),
 				...req.body,
@@ -33,6 +37,8 @@ export default class {
 		res: Response,
 	) {
 		try {
+			utils.validPropeties<{ postId: string }>(req.body, { postId: '' });
+
 			const result = await PostModel.addComment(req.body.postId);
 			res.status(200).json(result.value || {});
 		} catch (err) {
@@ -45,6 +51,8 @@ export default class {
 		res: Response,
 	) {
 		try {
+			utils.validPropeties<{ id: string, user: string, type: 'like'|'dislike' }>(req.body, { id: '', user: '', type: 'like' });
+
 			const post = await PostModel.find(req.body.id);
 
 			const like = post?.likes.find((l) => l === req.body.user);

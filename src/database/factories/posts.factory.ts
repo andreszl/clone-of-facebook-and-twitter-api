@@ -253,10 +253,7 @@ class PostsFactory {
 
 	public save() {
 		try {
-			if (process.env.NODE_ENV !== 'test') {
-				PostModel.store(this.$post as interfaces.posts.IPost);
-			}
-
+			PostModel.store(this.$post as interfaces.posts.IPost);
 			return this.$post;
 		} catch (err) {
 			console.log(err);

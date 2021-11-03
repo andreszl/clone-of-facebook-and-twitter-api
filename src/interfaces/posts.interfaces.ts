@@ -48,4 +48,10 @@ export namespace posts {
 		'timestamp.created_at'?: Date,
 		'timestamp.updated_at'?: Date,
 	}
+
+	export const schema: Icreate = {
+		title: '',
+		description: '',
+		email: '',
+	};
 }

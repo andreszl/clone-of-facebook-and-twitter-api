@@ -12,7 +12,7 @@
     "path": "/graphql"
   },
   "jwt":"clone-of-facebook-and-twitter",
-  "public": "=public",
-  "assets": "=public/assets",
+  "public": "public",
+  "assets": "public/assets",
 	"storage": "storage"
 }

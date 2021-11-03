@@ -19,6 +19,10 @@ class PostModel {
 			.findOne({ _id: new ObjectId(id) });
 	}
 
+	public static async deleteAll() {
+		return (await db).collection<interfaces.posts.IPost>('posts').deleteMany({ });
+	}
+
 	public static async insertMany(posts: interfaces.posts.IPost[]) {
 		return (await db).collection<interfaces.posts.IPost>('posts').insertMany(posts);
 	}

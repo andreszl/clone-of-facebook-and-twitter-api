@@ -1,4 +1,5 @@
 module.exports = {
+	verbose: true,
 	roots: [
 		'<rootDir>',
 	],
@@ -10,8 +11,5 @@ module.exports = {
 		'ts',
 		'tsx',
 		'js',
-		'jsx',
-		'json',
-		'node',
 	],
 };

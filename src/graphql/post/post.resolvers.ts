@@ -11,7 +11,7 @@ export default {
 		 * @param {string} skip
 		 * @param {string} date
 		 */
-		posts: (_, { limit = 10, skip = 1, date = String(new Date()) }) => {
+		posts: (_, { limit = 10, skip = 0, date = String(new Date()) }) => {
 			return PostModel.get(limit, skip, new Date(date));
 		},
 		post: (_, { id } : { id: string }) => {

@@ -3,19 +3,23 @@
   "version": "1.0.0",
   "description": "clone-of-facebook-and-twitter-api",
   "main": "src/index.ts",
-  "scripts": {
+  "scripts": {	
 		"dev": "ts-node src/index.ts",
-    "start": "set NODE_ENV=test&& ts-node src/index.ts",
-    "start:unix": "export NODE_ENV=test&& ts-node src/index.ts",
+    "start": "set NODE_ENV=production&& ts-node src/index.ts",
+    "start:unix": "export NODE_ENV=production&& ts-node src/index.ts",
     "nodemon": "npx nodemon",
-    "test": "npx jest --runInBand --detectOpenHandles",
+    "test:qa": "set NODE_ENV=qa&& npx jest  --runInBand --detectOpenHandles",
+    "test": "set NODE_ENV=test&& npx jest --runInBand --detectOpenHandles",
+    "test:watch": "set NODE_ENV=test&& npx jest --runInBand --detectOpenHandles --watch",
     "build": "tsc",
     "start:prod": "pm2 node ./build/index.js",
     "lab": "ts-node lab.ts",
     "watch:debug": "nodemon --inspect=5858 -e ts,tsx --exec node -r ts-node/register ./index.ts",
     "migrate": "sh ./scripts/migrate.sh",
     "migrate:seed": "sh ./scripts/migrate_seed.sh",
-    "seeders": "sh ./scripts/seeders.sh"
+    "seeders": "sh ./scripts/seeders.sh",
+		"pre-commit": "npm run lint && npm run test",
+    "pre-push": "npm run pre-commit"
   },
   "keywords": [
     "Express",
@@ -58,7 +62,9 @@
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^1.7.0",
     "ts-node": "^8.6.2",
-    "typescript": "^3.9.10"
+    "typescript": "^3.9.10",
+		"@commitlint/cli": "^12.1.2",
+    "@commitlint/config-conventional": "^12.1.2"
   },
   "dependencies": {
     "@graphql-modules/core": "^0.7.14",
@@ -87,5 +93,12 @@
     "supertest": "^4.0.2",
     "swig": "^1.4.2",
     "ts-jest": "^25.5.0"
+  },
+	"husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit",
+      "pre-push": "npm run pre-push",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
