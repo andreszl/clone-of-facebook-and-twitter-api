@@ -1,6 +1,6 @@
 import repl from 'repl';
 import { ObjectId } from 'mongodb';
-import { factory, Post } from './src/database/factories';
+import { factory, Post } from './database/factories';
 
 const local: any = repl.start('>>> ');
 require('repl.history')(local, `${process.env.HOME}/.node_history`);

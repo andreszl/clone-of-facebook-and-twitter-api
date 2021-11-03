@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'; // eslint-disable-line no-unused-vars
 import { graphql } from 'graphql';
-import { modules } from '../graphql/index';
+import { modules } from '../graphql';
 
 class IndexController {
 
