@@ -8,7 +8,7 @@ import cons from 'consolidate';
 import indexRoutes from './routes/index.routes';
 import postsRoutes from './routes/posts.routes';
 
-import { modules } from './graphql/modules';
+import { modules } from './graphql';
 
 const { schema, context } = modules;
 
@@ -48,8 +48,8 @@ class Server {
 	}
 
 	start() {
-		this.app.listen(4001, (): void => {
-			console.log(`🚀 Server ready at http://${config.get('express.host')}:${4001}`);
+		this.app.listen(this.app.get('port'), (): void => {
+			console.log(`🚀 Server ready at http://${config.get('express.host')}:${this.app.get('port')}`);
 		});
 	}
 }

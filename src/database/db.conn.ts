@@ -31,8 +31,7 @@ class Database {
 
 	public async connect() {
 		try {
-			this.connection = await MongoClient.connect('mongodb://127.0.0.1:27017/clone-of-facebook-and-twitter', { useUnifiedTopology: true });
-			console.log('Database created!');
+			this.connection = await MongoClient.connect(`mongodb://${this.host}:${this.port}`, { useUnifiedTopology: true });
 		} catch (err) {
 			console.log(err);
 			throw err;

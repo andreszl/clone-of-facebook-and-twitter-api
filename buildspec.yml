@@ -1,23 +1,14 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-        docker: 18
-    commands:
-      - echo Installing source NPM dependencies...
-  pre_build:
-    commands:
-      - echo Installing source NPM dependencies...
-  build:
-    commands:
-      - echo Build started on `date`
-  post_build:
-    commands:
-      - echo Build completed on `date`
+    install:
+        runtime-versions:
+            docker: 18
+    pre_build:
+        commands:
+        - npm run test
+
 artifacts:
-  files:
-    - build/**/*
-    - package.json
-    - package-lock.json
-    - node_modules/**/*
+    type: zip
+    files:
+        - package.json
