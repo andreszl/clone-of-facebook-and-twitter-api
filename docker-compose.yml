@@ -12,7 +12,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      target: base
+      target: test
     container_name: api
     expose:
       - '80'

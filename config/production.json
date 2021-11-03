@@ -6,7 +6,7 @@
   },
   "express": {
     "host": "localhost",
-    "port": 4001
+    "port": 80
   },
   "graphql": {
     "path": "/graphql"

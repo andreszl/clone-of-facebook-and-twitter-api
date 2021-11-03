@@ -1,4 +1,4 @@
-FROM node as base
+FROM node as test
 
 WORKDIR /usr/src/app
 
@@ -10,7 +10,7 @@ RUN npm i
 
 COPY . .
 
-FROM base as production
+FROM test as production
 
 ENV NODE_PATH=./build
 
