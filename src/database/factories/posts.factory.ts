@@ -242,9 +242,7 @@ class PostsFactory {
 				posts.push(this.builder(subscribeProperties));
 			}
 
-			if (process.env.NODE_ENV !== 'test') {
-				PostModel.insertMany(posts);
-			}
+			PostModel.insertMany(posts);
 
 			return posts;
 		} catch (err) {
