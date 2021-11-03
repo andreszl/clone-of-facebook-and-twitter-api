@@ -13,9 +13,6 @@ services:
       context: .
       dockerfile: Dockerfile
       target: base
-    volumes:
-      - ./src:/usr/src/app
-      - ./nodemon.json:/usr/src/app/nodemon.json
     container_name: api
     expose:
       - '4001'
