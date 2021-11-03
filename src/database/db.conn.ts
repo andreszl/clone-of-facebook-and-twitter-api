@@ -31,7 +31,7 @@ class Database {
 
 	public async connect() {
 		try {
-			this.connection = await MongoClient.connect(`mongodb://db:${this.port}//${this.dbname}`, { useUnifiedTopology: true });
+			this.connection = await MongoClient.connect(`mongodb://${this.host}:${this.port}//${this.dbname}`, { useUnifiedTopology: true });
 		} catch (err) {
 			console.log(err);
 			throw err;

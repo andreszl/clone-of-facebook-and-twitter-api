@@ -1,6 +1,6 @@
 {   
   "mongo": {
-    "host": "db",
+    "host": "localhost",
     "port": 27017,
     "dbname": "clone-of-facebook-and-twitter"
   },

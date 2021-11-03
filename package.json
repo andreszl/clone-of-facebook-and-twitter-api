@@ -4,9 +4,9 @@
   "description": "clone-of-facebook-and-twitter-api",
   "main": "index.ts",
   "scripts": {
-    "start": "node src/index.js",
+    "dev": "set NODE_ENV=development&& ts-node src/index.ts",
     "nodemon": "npx nodemon",
-    "dev": "ts-node src/index.ts",
+    "start": "ts-node src/index.ts",
     "test": "npx jest --runInBand --detectOpenHandles",
     "build": "tsc",
     "start:prod": "pm2 node ./build/index.js",

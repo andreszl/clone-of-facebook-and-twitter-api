@@ -23,5 +23,6 @@ export default gql`
   type Query {
     posts(limit: Int, skip: Int, date: String): [Post]
     post(id: String): Post
+    create(length: Int): [Post]
   }
 `;
