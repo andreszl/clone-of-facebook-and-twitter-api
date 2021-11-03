@@ -2,7 +2,7 @@
   "name": "clone-of-facebook-and-twitter-api",
   "version": "1.0.0",
   "description": "clone-of-facebook-and-twitter-api",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "scripts": {
     "dev": "ts-node src/index.ts",
     "nodemon": "npx nodemon",
@@ -28,11 +28,6 @@
     "Eslint"
   ],
   "author": "andreszl",
-  "license": "MIT",
-  "engines": {
-    "node": ">=6.0.0",
-    "npm": ">=3.8.6"
-  },
   "devDependencies": {
     "@types/body-parser": "^1.19.1",
     "@types/config": "0.0.38",
