@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "clone-of-facebook-and-twitter-api",
   "main": "src/index.ts",
-  "scripts": {	
-		"dev": "ts-node src/index.ts",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
     "start": "set NODE_ENV=production&& ts-node src/index.ts",
     "start:unix": "export NODE_ENV=production&& ts-node src/index.ts",
     "nodemon": "npx nodemon",
@@ -18,7 +18,7 @@
     "migrate": "sh ./scripts/migrate.sh",
     "migrate:seed": "sh ./scripts/migrate_seed.sh",
     "seeders": "sh ./scripts/seeders.sh",
-		"pre-commit": "npm run lint && npm run test",
+    "pre-commit": "npm run lint && npm run test",
     "pre-push": "npm run pre-commit"
   },
   "keywords": [
@@ -63,7 +63,7 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "ts-node": "^8.6.2",
     "typescript": "^3.9.10",
-		"@commitlint/cli": "^12.1.2",
+    "@commitlint/cli": "^12.1.2",
     "@commitlint/config-conventional": "^12.1.2"
   },
   "dependencies": {
@@ -94,7 +94,7 @@
     "swig": "^1.4.2",
     "ts-jest": "^25.5.0"
   },
-	"husky": {
+  "husky": {
     "hooks": {
       "pre-commit": "npm run pre-commit",
       "pre-push": "npm run pre-push",
