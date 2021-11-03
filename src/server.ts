@@ -48,8 +48,8 @@ class Server {
 	}
 
 	start() {
-		this.app.listen(4001, (): void => {
-			console.log(`🚀 Server ready at http://${config.get('express.host')}:${4001}`);
+		this.app.listen(80, (): void => {
+			console.log(`🚀 Server ready at http://${config.get('express.host')}:${80}`);
 		});
 	}
 }

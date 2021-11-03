@@ -15,9 +15,9 @@ services:
       target: base
     container_name: api
     expose:
-      - '4001'
+      - '80'
     ports:
-      - '4001:4001'
+      - '80:80'
     depends_on:
       - db
     command: npm run dev
