@@ -6,7 +6,7 @@ phases:
             docker: 18
     pre_build:
         commands:
-        - npm run test
+        - echo Installing source NPM dependencies...
 
 artifacts:
     type: zip
