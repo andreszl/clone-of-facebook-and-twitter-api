@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "nodemon": "npx nodemon",
-		"dev": "ts-node src/index.ts",
+    "dev": "ts-node src/index.ts",
     "test": "npx jest --runInBand --detectOpenHandles",
     "build": "tsc",
     "start:prod": "pm2 node ./build/index.js",
