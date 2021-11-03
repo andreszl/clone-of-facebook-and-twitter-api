@@ -20,4 +20,4 @@ services:
       - '80:80'
     depends_on:
       - db
-    command: npm run start
+    command: npm start
