@@ -22,7 +22,12 @@ class Server {
 		this.path = config.get('graphql.path');
 		this.port = config.get('express.port');
 		this.app = express();
-		this.server = new ApolloServer({ schema, context, introspection: true });
+		this.server = new ApolloServer({
+			schema,
+			context,
+			introspection: true,
+			playground: true,
+		});
 		this.config();
 		this.routes();
 	}
