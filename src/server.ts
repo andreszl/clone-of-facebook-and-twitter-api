@@ -53,8 +53,8 @@ class Server {
 	}
 
 	start() {
-		this.app.listen(80, (): void => {
-			console.log(`🚀 Server ready at http://${config.get('express.host')}:${80}`);
+		this.app.listen(config.get('express.port'), (): void => {
+			console.log(`🚀 Server ready at http://${config.get('express.host')}:${config.get('express.port')}`);
 		});
 	}
 }
