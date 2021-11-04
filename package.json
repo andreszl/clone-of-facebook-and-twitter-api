@@ -4,7 +4,7 @@
   "description": "clone-of-facebook-and-twitter-api",
   "main": "src/index.ts",
   "scripts": {
-    "dev": "ts-node src/index.ts",
+    "dev": "ts-node src/index.ts ",
     "start": "set NODE_ENV=production&& ts-node src/index.ts",
     "start:unix": "export NODE_ENV=production&& ts-node src/index.ts",
     "nodemon": "npx nodemon",
