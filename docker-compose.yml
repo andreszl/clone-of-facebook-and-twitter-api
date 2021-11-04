@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  db:
+    image: mongo
+    restart: always
+    deploy:
+      replicas: 1
+    ports:
+      - 27017:27017
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: test
+    container_name: api
+    expose:
+      - '80'
+    ports:
+      - '80:80'
+    depends_on:
+      - db
+    command: npm run start

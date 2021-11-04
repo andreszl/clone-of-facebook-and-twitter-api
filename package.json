@@ -5,8 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "ts-node src/index.ts ",
-    "start": "set NODE_ENV=production&& ts-node src/index.ts",
-    "start:unix": "export NODE_ENV=production&& ts-node src/index.ts",
+    "start": "export NODE_ENV=production&& ts-node src/index.ts",
+    "start-win": "set NODE_ENV=production&& ts-node src/index.ts",
     "nodemon": "npx nodemon",
     "test:qa": "set NODE_ENV=qa&& npx jest  --runInBand --detectOpenHandles --quiet",
     "test": "set NODE_ENV=test&& npx jest --runInBand --detectOpenHandles --quiet",
